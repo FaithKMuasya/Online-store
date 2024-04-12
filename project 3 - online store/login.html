@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Online Store</title>
+    <link rel="shortcut icon" href="images/online-store.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // JavaScript code to execute immediately
+        let userProfile = localStorage.getItem('userProfile');
+
+        // Check if userProfile exists in localStorage
+        if (userProfile) {
+            document.location.href='dashboard.html';
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- a container to wrap everything so that we ca center it.
+    i have called it login-container (background)-->
+    <div class="login-container">
+
+        <!-- Header -->
+        <center>
+            <img src="images/online-store.png" width="100"/>
+        </center>
+
+        <h2>Online Store | Login</h2>
+
+        <!-- Form (background)-->
+        <form action="#" id="login-form">
+             <!-- Email field -->
+            <label>Email Address</label>
+            <input type="email" placeholder="email@domain.com" class="textbox" id="input-email" required/>
+            <br/>
+
+             <!-- Password field -->
+            <label>Password</label>
+            <input type="password" placeholder="*******" class="textbox" id="input-password" required/>
+            <br/>
+          
+             <!-- Login button -->
+            <button class="button button-login" id="login-button">Login</button>
+        
+
+        </form>
+        <!-- Form ends here -->
+    </div>
+    <!-- the login-container ends here -->
+    
+
+
+    <!-- Link to external javascript file -->
+    <!-- this linking should be within <body> tags, and as the last item because 
+        javascript should be the last thing to be loaded in html after
+        all other scripts and DOM elements have been loaded successfully
+    -->
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store | Home</title>
+    <link rel="shortcut icon" href="images/online-store.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script>
+        // JavaScript code to execute immediately
+        let userProfile = localStorage.getItem('userProfile');
+
+        // Check if userProfile exists in localStorage
+        if (userProfile) {
+            //
+        } else {
+            // userProfile does not exist in localStorage
+            document.location.href='login.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Online Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="cart.html">My cart</a></li>
+                    <li><a href="#"><span id="txt-username"></span> (<span id="txt-email"></span>)</a></li>
+                    <li><a href="#" id="btn-logout">Logout</a></li>
+                </ul>
+                <div class="cart-icon">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <h1>Dashboard</h1>
+
+    <main class="product-container" id="product-container">
+        <!-- Products-->
+        <div class="loading-section" id="loading-section">Loading</div>
+        <!-- Additional eCommerce sections if needed -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Store. Designed by Faith &#9829;</p>
+    </footer>
+
+    <script src="javascript/dashboard.js"></script>
+</body>
+</html>

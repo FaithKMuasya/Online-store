@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store | Checkout</title>
+    <link rel="shortcut icon" href="images/online-store.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script>
+        // JavaScript code to execute immediately
+        let userProfile = localStorage.getItem('userProfile');
+
+        // Check if userProfile exists in localStorage
+        if (userProfile) {
+            //
+        } else {
+            // userProfile does not exist in localStorage
+            document.location.href='login.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Online Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="cart.html" class="active">My cart</a></li>
+                    <li><a href="#"><span id="txt-username"></span> (<span id="txt-email"></span>)</a></li>
+                    <li><a href="#" id="btn-logout">Logout</a></li>
+                </ul>
+                <div class="cart-icon">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <h1>Checkout</h1>
+  
+    <main class="checkout-container">
+
+        <center>
+            <img src="images/saf.png" width="300"/>
+        </center>
+
+            <div>
+                <ul>
+                    <li>Go to Mpesa</li>
+                    <li>Go to Buy goods</li>
+                    <li>Enter till number</li>
+                    <li>Enter amount</li>
+                    <li>Enter pin</li>
+                    <li>Complete transaction</li>
+                    <li>Upload your transaction receipt/code below</li>
+                </ul>
+            </div>
+
+            <form class="checkout-form" action="dashboard.html">
+                <label for="">Code</label>
+                <input type="text" placeholder="transaction code" required/>
+
+                <label for="">Upload Receipt</label>
+                <input type="file" required/>
+
+                <button type="submit">Submit</button>
+
+            </form>
+     
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Store. Designed by Faith &#9829;</p>
+    </footer>
+
+    <script src="javascript/checkout.js"></script>
+</body>
+</html>
